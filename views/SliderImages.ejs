@@ -1,0 +1,466 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://kit.fontawesome.com/cf4302401e.js" crossorigin="anonymous"></script>
+ <!-- Bootstrap CSS -->
+ <link rel="stylesheet" href="<%=urlMain %>/Css/bootstrap.min.css">
+ <link rel="stylesheet" href="<%=urlMain %>/Css/all.min.css">
+ <link rel="stylesheet" type="text/css" href="<%=urlMain %>/Css/dataTables.bootstrap4.min.css">
+ <link rel="stylesheet" href="<%=urlMain %>/Css/rateit.css">
+ <link rel="stylesheet" href="<%=urlMain %>/Css/fab.css">
+ <link rel="stylesheet" type="text/css" media="screen" href="Css/sheet.css" />
+ <link rel="stylesheet" type="text/css" media="screen" href="Css/main.css" />
+ <title>Slider Show</title>
+
+
+    <link rel="shortcut icon" href="image/food.png" />
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md navbar-light">
+            <button class="navbar-toggler ml-auto mb-2 bg-light" type="button" data-toggle="collapse" data-target="#myNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <div class="container-fluid">
+                    <div class="row">
+                        <!--sidbar-->
+                        <div class=" col-xl-2  col-lg-3 col-md-4 sidebar ">
+    
+                            <ul class="navbar-nav flex-column mt-0 ml-0 ">
+                                <li style="background-color: #FA640F ;height: 50px;margin: 0;width: 400px; " id="li1"><h2 style="color: #FFFFFF;font-weight: bold;margin-left: 10px;"><%=name%></h2> </li>
+                                <li class="nav-item sidebar-link" style="margin-top: 65px">
+                                    <a href="/dashboard" class="nav-link text-dark p-3 mb-2 ">
+                                        <i class="fas fa-home fa-lg text-dark mr-3" aria-hidden="true"></i> Dashboard</a>
+                                </li>
+                                <li class="nav-item sidebar-link">
+                                    <a href="/category" class="nav-link text-dark p-3 mb-2  ">
+                                        <i class="fas fa-list-alt fa-lg text-dark mr-3 " aria-hidden="true"></i>
+                                        Category</a>
+                                </li>
+                                <li class="nav-item sidebar-link">
+                                    <a href="/meal_prodect" class="nav-link text-dark p-3 mb-2 ">
+                                        <i class="fas fa-utensils fa-lg text-dark mr-3" aria-hidden="true"></i> Meal Products</a>
+                                </li>
+                                <li class="nav-item sidebar-link">
+                                    <a href="/addoffer" class="nav-link text-dark p-3 mb-2 ">
+                                        <i class="fas fa-gift fa-lg text-dark mr-3" aria-hidden="true"></i> Offer</a>
+                                </li>
+                                <li class="nav-item sidebar-link">
+                                    <a href="/appusers" class="nav-link text-dark p-3 mb-2 ">
+                                        <i class="fas fa-users fa-lg text-dark mr-3" aria-hidden="true"></i> App Users</a>
+                                </li>
+                                
+                            
+                                <li class="nav-item sidebar-link">
+                                    <a href="/slidershow" class="nav-link text-light p-3 mb-2 current">
+                                        <i class="fas fa-bell fa-lg text-light mr-3" aria-hidden="true"></i> Slider show </a>
+                                </li>
+                                <li class="nav-item sidebar-link">
+                                    <a href="/setting" class="nav-link text-dark p-3 mb-2 ">
+                                        <i class="fas fa-user-cog fa-lg text-dark mr-3" style="color: #576A85;" aria-hidden="true"></i>Setting</a>
+                                </li>
+      
+    
+    
+    
+                            </ul>
+    
+    
+                        </div>
+    
+                        <div class=" col-xl-10 col-lg-9 col-md-8 " style=" z-index: 1;background-color: white; position: fixed;top:70px ; right: 0px;;height: 60px">
+                            <div class="row">
+                                <div class="col ml-4 pl-3 ml-4">
+                                    <p class="textstayle">S<span>lider</span>
+                                        I<span>mages</span>
+                                    </p>
+    
+                                </div>
+                                
+                                
+                            </div>
+                            
+                            
+    
+    
+                        </div>
+                       
+                              
+                          
+                        </div>
+                       
+    
+    
+                        
+    
+                        <!--end of sidebar-->
+                        <!--top nav-->
+                        <div class="col-xl-10 col-lg-9 col-md-8 ml-auto bg-white fixed-top  top-navbar " style="height: 60px;  ">
+                            <div class="row">
+                                <div class="col-md-4 col-lg-8 ">
+    
+    
+                                </div>
+    
+                                <div class="col-md-8 col-lg-4">
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item icon-parent" style="margin:15px ;">
+                                            <a href="#" class="nav-link icon-bullet">
+                                                <i class="fas fa-comments text-muted fa-lg"></i>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item icon-parent" style="margin-top:15px ; margin-right: 12px;">
+                                            <a href="#" class="nav-link icon-bullet">
+                                                <i class="fas fa-bell text-muted fa-lg"></i>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item" style="margin-top:5px ; margin-bottom: 5px;">
+    
+                                            <a href="#">
+                                                <img src="image/Admin/<%=image%>" width="50" height="50" class="rounded-circle">
+                                            </a>
+    
+    
+                                        </li>
+                                        <li class="nav-item ml-md-auto" style="margin:15px ;">
+                                            <a href="#" class="nav-link" data-toggle="modal" data-target="#sign-out">
+                                                <i class="fas fa-sign-out-alt text-danger fa-lg"></i>
+                                            </a>
+                                        </li>
+    
+                                    </ul>
+    
+                                </div>
+    
+    
+                            </div>
+    
+    
+    
+    
+                        </div>
+    
+    
+    
+    
+                        <!--end top nav-->
+    
+    
+                    </div>
+                </div>
+    
+            </div>
+    
+    
+    
+        </nav>
+        <div class="modal" id="sign-out">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title"> Want to Leave ?</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        Press logout to leave
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-dismiss="modal">
+                          Stay Here
+                        </button>
+                        <a href="https://192.168.1.5:8081/logout" class="btn btn-danger" > logout</a>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    
+        <br><br><br><br><br><br>
+        
+    <!--Start Button Add New Offer -->
+    <div class="container-fluid  mt-5 md-0   py-3">
+
+            <div class="row">
+                    <div class="col-2  "></div>
+                    <div class="col-auto mr-auto pl-5">
+        
+                        <button id="btnAddNewImage" style="background-color: #FA640F; color: #FFFFFF;" class="btn btn shadow-sm " data-toggle="modal" data-target="#AddNewImage">
+                            Add New Image
+                        </button>
+        
+                    </div><div class=" col-auto ml-auto px-5">
+        
+                        <button id="btnPreviewImages"  style="background-color: #FA640F;color: #FFFFFF;" class="btn btn shadow-sm " data-toggle="modal" data-target="#PreviewNewSliderImages">
+                            Preview Slider
+                        </button>
+        
+                    </div>
+        
+                </div>
+
+
+
+    </div>
+    <!--End Button Add New Offer -->
+
+    <!--Star content Page -->
+    <div class="container-fluid  mt-0">
+
+
+
+        <!--Star Data Card Order -->
+        <div class="row mt-0">
+            <div class="col-2 "></div>
+            <div class="col px-5">
+
+                <div class="card  mb-3" style="max-width: 100%;">
+                    <div class="card-header  " style="background-color: #576A85;" id="myCardData">
+                        <h5>Slider Images Details
+                        </h5>
+                        <h5>
+                        </h5>
+                    </div>
+
+
+
+
+                    <!--Start Data Table -->
+                    <div class="card-body table-responsive px-0">
+
+
+                        <table class="table table-striped" id="TableSliderImagesData" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Product Name</th>
+                                        <th>Product Icon</th>
+                                        <th>Slider Image</th>
+                                        <th>Price</th>
+                                        <th>Action</th>
+                                    </tr>
+
+                                </tr>
+                            </thead>
+
+                        </table>
+
+                    </div>
+                    <!--End Data Table -->
+
+
+
+
+
+
+
+                </div>
+
+            </div>
+            <!--End footer Table -->
+        </div>
+        <!--End Data Card Order -->
+
+
+        <!--Start Model Add New Image-->
+        <div class="modal fade" id="AddNewImage">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header" >
+                        <h5 class="modal-title" ><p class="textstayle">A<span>dd</span> N<span>ew</span> S<span>lider</span></p></h5>
+                        <button type="button" class="close" data-dismiss="modal" style="color: #f1f1f1">×</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <form id="FormAddNewImage" enctype="multipart/form-data">
+
+
+                            <div class="form-group">
+                                <label for="AddImage_SelectProduct">Product Name</label>
+                                <select class="custom-select" id="AddImage_SelectProduct" required>
+
+                                </select>
+
+                            </div>
+
+
+                            <label for="AddNewImage_SliderImage">Slider Image</label>
+                            <div class="custom-file ">
+                                <input type="file" class="custom-file-input" id="AddNewImage_SliderImage" accept="image/*" required="">
+                                <label class="custom-file-label" for="AddNewImage_SliderImage">Choose file</label>
+                            </div>
+
+                            <div class="row justify-content-center">
+                                <div class="col-md-5 mt-3">
+                                    <input type="submit" class="btn btn-success form-control" style="background-color: #FA640F;border: none;" value="Add">
+                                </div>
+                                <div class="col-md-5 mt-3">
+                                    <input type="button" class="btn btn-secondary btn-md form-control" data-dismiss="modal" value="Close">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+        <!--End Model Add New Image-->
+
+
+
+
+
+
+
+
+        <!--Start Model Remove  SliderImage-->
+        <div class="modal fade" id="ActionRemoveSliderImage">
+            <div class="modal-dialog ">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header" >
+
+                            <h5 class="modal-title" ><p class="textstayle"><span><i class="fa fa-trash" aria-hidden="true"></i></span> R<span>emove</span> S<span>lider</span> I<span>mage</span></p></h5>
+                             
+                        <button type="button" class="close" data-dismiss="modal" style="color: #000000">×</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <form id="FormRemoveSliderImage">
+                            <div class="form-group">
+                                <label for="RemoveSliderImage_ProName ">
+                                    <div class="alert alert-danger" role="alert">
+                                    <i class="fas fa-exclamation-triangle text-danger"> </i> You will Remove
+                                    <span class="text-danger" id="RemoveSliderImage_ProName"></span> from Slider Image.
+                                </label>
+                                <p class="font-weight-bold">Are you sure to Remove
+                                    <span class="text-danger" id="RemoveSliderImage_ProName"></span> from Slider Image?</p>
+                                </div>
+                                <input id="RemoveSliderImage_SelectProduct" hidden>
+                            </div>
+
+
+                            <div class="row justify-content-center">
+                                <div class="col-md-5 mt-3">
+                                    <input type="submit" class="btn btn-primary form-control"  value="Yes">
+                                </div>
+                                <div class="col-md-5 mt-3">
+                                    <input type="button" class="btn btn-secondary btn-md form-control"  data-dismiss="modal" value="No">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+        <!--End Model Remove SliderImage-->
+
+        
+        <!--Start Model   SliderImage-->
+        <div class="modal fade SliderImageModel" id="myPreviewImageModal">
+                <span class="SliderImageModelClose">&times;</span>
+            <div class="modal-dialog ">
+                <div class="modal-content">
+
+                    
+
+                    <!-- Modal body -->
+                    <div class="modal-body m-0 p-0">
+                        <img id="imgPreviewModel" src="" class="img-fluid" />
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+        <!--End Model  SliderImage-->
+
+
+
+
+         <!--Start Model   SliderImage-->
+         <div class="modal fade SliderImageModel" id="PreviewNewSliderImages">
+                <span class="SliderImageModelClose">&times;</span>
+            <div class="modal-dialog ">
+                <div class="modal-content">
+
+                    
+
+                    <!-- Modal body -->
+                    <div class="modal-body m-0 p-0">
+                            <div id="ProductImages" class="carousel slide" data-ride="carousel">
+
+                                    <ol id="Sliderindicators" class="carousel-indicators">
+                                        
+
+                                            
+                                                        
+                                    </ol>
+
+                                    <div id="SliderCarousel-inner" class="carousel-inner">
+                                        
+                                            
+                                               
+                                                    
+                                                        
+                                    </div>
+
+
+                                    <a class="carousel-control-prev" href="#ProductImages" role="button" data-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+                                    </a>
+                                    <a class="carousel-control-next" href="#ProductImages" role="button" data-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
+                                    </a>
+                             </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+        <!--End Model  SliderImage-->
+
+
+    </div>
+    <!--End content Page -->
+
+
+
+ <!--Start Script-->
+ <script src="<%=urlMain %>/js/jquery-3.3.1.min.js"></script>
+ <script src="<%=urlMain %>/js/popper.min.js"></script>
+ <script src="<%=urlMain %>/js/main.js"></script>
+ <script src="<%=urlMain %>/js/bootstrap.min.js"></script>
+ <script type="text/javascript" charset="utf8" src="<%=urlMain %>/js/jquery.dataTables.min.js"></script>
+ <script type="text/javascript" charset="utf8" src="<%=urlMain %>/js/dataTables.bootstrap4.min.js"></script>
+ <script src="<%=urlMain %>/js/hullabaloo.js"></script>
+ <script src="<%=urlMain %>/js/jquery.rateit.min.js"></script>
+ <script src="<%=urlMain %>/js/fab.js"></script>
+     <!--End Script-->
+
+
+
+
+        </body>
+
+        </html>

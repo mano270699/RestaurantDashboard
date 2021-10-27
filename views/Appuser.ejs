@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://kit.fontawesome.com/cf4302401e.js" crossorigin="anonymous"></script>
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="Css/bootstrap.min.css">
+    <link rel="stylesheet" href="Css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="Css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="Css/rateit.css">
+    <link rel="stylesheet" href="Css/fab.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="Css/sheet.css" />
+    <title>App users</title>
+    <link rel="shortcut icon" href="image/food.png" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-light">
+        <button class="navbar-toggler ml-auto mb-2 bg-light" type="button" data-toggle="collapse" data-target="#myNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <div class="container-fluid">
+                <div class="row">
+                    <!--sidbar-->
+                    <div class=" col-xl-2  col-lg-3 col-md-4 sidebar ">
+
+                        <ul class="navbar-nav flex-column mt-0 ml-0 ">
+                            <li style="background-color: #FA640F ;height: 50px;margin: 0;width: 400px; " id="li1">
+                                <h2 style="color: #FFFFFF;font-weight: bold;margin-left: 10px;">
+                                    <%=name%>
+                                </h2>
+                            </li>
+                            <li class="nav-item sidebar-link" style="margin-top: 65px">
+                                <a href="/dashboard" class="nav-link text-dark p-3 mb-2 ">
+                                    <i class="fas fa-home fa-lg text-dark mr-3" aria-hidden="true"></i> Dashboard</a>
+                            </li>
+                            <li class="nav-item sidebar-link">
+                                <a href="/category" class="nav-link text-dark p-3 mb-2  ">
+                                    <i class="fas fa-list-alt fa-lg text-dark mr-3 " aria-hidden="true"></i> Category
+                                </a>
+                            </li>
+                            <li class="nav-item sidebar-link">
+                                <a href="/meal_prodect" class="nav-link text-dark p-3 mb-2 ">
+                                    <i class="fas fa-utensils fa-lg text-dark mr-3" aria-hidden="true"></i> Meal Products</a>
+                            </li>
+                            <li class="nav-item sidebar-link">
+                                <a href="/addoffer" class="nav-link text-dark p-3 mb-2 ">
+                                    <i class="fas fa-gift fa-lg text-dark mr-3" aria-hidden="true"></i> Offer</a>
+                            </li>
+                            <li class="nav-item sidebar-link">
+                                <a href="/appusers" class="nav-link text-dark p-3 mb-2 current">
+                                    <i class="fas fa-users fa-lg text-dark mr-3" aria-hidden="true"></i> App Users</a>
+                            </li>
+
+
+                            <li class="nav-item sidebar-link">
+                                <a href="/slidershow" class="nav-link text-dark p-3 mb-2 ">
+                                    <i class="fas fa-bell fa-lg text-dark mr-3" aria-hidden="true"></i> Slider show </a>
+                            </li>
+                            <li class="nav-item sidebar-link">
+                                <a href="/setting" class="nav-link text-dark p-3 mb-2 ">
+                                    <i class="fas fa-user-cog fa-lg text-dark mr-3" style="color: #576A85;" aria-hidden="true"></i>Setting</a>
+                            </li>
+
+
+
+
+                        </ul>
+
+
+                    </div>
+
+                    <div class=" col-xl-10 col-lg-9 col-md-8 " style=" z-index: 1;background-color: white; position: fixed;top:70px ; right: 0px;;height: 60px">
+                        <div class="row">
+                            <div class="col ml-4 pl-3 ml-4">
+                                <p class="textstayle">A<span>pp</span> U
+                                    <span>sers</span>
+                                </p>
+
+                            </div>
+
+
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+                </div>
+
+
+
+
+
+                <!--end of sidebar-->
+                <!--top nav-->
+                <div class="col-xl-10 col-lg-9 col-md-8 ml-auto bg-white fixed-top  top-navbar " style="height: 60px;  ">
+                    <div class="row">
+                        <div class="col-md-4 col-lg-8 ">
+
+
+                        </div>
+
+                        <div class="col-md-8 col-lg-4">
+                            <ul class="navbar-nav">
+                                <li class="nav-item icon-parent" style="margin:15px ;">
+                                    <a href="#" class="nav-link icon-bullet">
+                                        <i class="fas fa-comments text-muted fa-lg"></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item icon-parent" style="margin-top:15px ; margin-right: 12px;">
+                                    <a href="#" class="nav-link icon-bullet">
+                                        <i class="fas fa-bell text-muted fa-lg"></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item" style="margin-top:5px ; margin-bottom: 5px;">
+
+                                    <a href="#">
+                                            <img src="image/Admin/<%=image%>" width="50" height="50" class="rounded-circle">
+                                        </a>
+
+
+                                </li>
+                                <li class="nav-item ml-md-auto" style="margin:15px ;">
+                                    <a href="#" class="nav-link" data-toggle="modal" data-target="#sign-out">
+                                        <i class="fas fa-sign-out-alt text-danger fa-lg"></i>
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+
+                    </div>
+
+
+
+
+                </div>
+
+
+
+
+                <!--end top nav-->
+
+
+            </div>
+        </div>
+
+        </div>
+
+
+
+    </nav>
+    <div class="modal" id="sign-out">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title"> Want to Leave ?</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    Press logout to leave
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">
+                      Stay Here
+                    </button>
+                    <a href="http://192.168.1.12:8081/logout" class="btn btn-danger"> logout</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <!--End of card-->
+    <!-- Table-->
+
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <section>
+        <div class="container-fluid">
+            <div class="row mb-15 ">
+                <div class="col-xl-10 col-lg-8 col-md-6 ml-auto">
+
+                    <div class="row  ">
+                        <div class="col-12">
+                            <div style="height:60px ;background-color:#576A85; ">
+                                <h2 style="color: white;font-size: 20px;padding: 15px;font-weight: bold">User Data</h2>
+
+                                <div class="row justify-content-between  bg-white " style="background-color:#576A85;margin-left: 0;margin-right: 0px;">
+
+                                    <div class="card-body table-responsive px-0 ">
+                                        <table class="table table-striped " id="TableAppUserData" style="width:100% ; background-color: #FFFFFF;">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Name</th>
+                                                    <th>Location</th>
+
+                                                    <th>More details</th>
+                                                    <th>Actions</th>
+
+                                                </tr>
+                                            </thead>
+
+                                        </table>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End of Table-->
+
+
+    <a class="float">
+        <i data-toggle="modal" data-target=".bd-example-modal-lgse" class="fas fa-clock my-float" style="color: white;"></i>
+    </a>
+    <div class="modal fade bd-example-modal-lgse" id="ActionCustomerDetailsBookingTable" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-light">
+                    <h5 class="modal-title pb-2 " id="myLargeModalLabel">
+                        <p class="textstayle"> A<span>ll</span> U<span>ser</span> B<span>ooking</span> T<span>able</span> </p>
+                    </h5>
+                    <button type="button" class="close border-danger" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <hr>
+                    <h5>Booking details</h5>
+                    <hr>
+
+                    <table class="table table-striped table-responsive-sm bg-light text-center mt-0" id="BookingTableIUser" style="width:100% ; background-color: #FFFFFF;">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Order Detail</th>
+                                <th>Booking Date</th>
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!--BookingTableOrderDetails-->
+
+
+    <div class="modal fade bd-example-modal-lg" id="BookingTableOrderDetails" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-light">
+                    <h5 class="modal-title pb-2 " id="myLargeModalLabel">
+                        <p class="textstayle">O<span>rder</span> N<span>umber :</span> # <span id="BookTableordre_number"> 1</span> </p>
+                    </h5>
+                    <button type="button" class="close border-danger" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <hr>
+                    <h5>Order Direction</h5>
+                    <hr>
+                    <ul style="list-style: none;">
+                        <li id="BookTablecustomerName">Name: </li>
+                        <li id="BookTablecustomerPhone">phone: </li>
+                        <li id="BookTablecustomerAddress">Address: </li>
+                        <li id="BookTablecustomerPayment">payment type: </li>
+                        <li id="BookTablecustomerDelivary">delivary type: </li>
+                        <ul style="list-style: none;">
+                            <li id="BookTableTadleId">Table ID: </li>
+                            <li id="BookTableNumPeople">Number People: </li>
+                            <li id="BookTableTadledate">Book Date: </li>
+                            <li id="BookTableTadletime">Book Time: </li>
+                            <li id="BookTableTadlenote">Note: </li>
+                        </ul>
+
+
+                    </ul>
+                    <hr>
+                    <h5>Order Content</h5>
+                    <hr>
+                    <div class="row justify-content-between  bg-white " style="background-color:#576A85;margin-left: 0;margin-right: 0px;">
+
+                        <div class="card-body table-responsive px-0 ">
+                            <table class="table table-striped " id="TableUserOrderDetails" style="width:100% ; background-color: #FFFFFF;">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Meal Prodect</th>
+                                        <th>Price</th>
+                                        <th>Quantity</th>
+                                        <th> Total Price</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody id="mealOrderdetails"></tbody>
+
+
+
+                            </table>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--Start Model 1-->
+    <div class="modal fade bd-example-modal-lg" id="ActionAppUserDetails" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-light">
+                    <h5 class="modal-title pb-2 " id="myLargeModalLabel">
+                        <p class="textstayle">U<span>ser</span> D<span>etails </span></p>
+                    </h5>
+                    <button type="button" class="close border-danger" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <hr>
+                    <h5>Order Direction</h5>
+                    <hr>
+                    <ul style="list-style: none;">
+                        <li id="customerName">Name: </li>
+                        <li id="customerPhone">phone: </li>
+                        <li id="customerAddress">Address: </li>
+                        <li id="customerEmail">Email: </li>
+
+                    </ul>
+                    <hr>
+                    <h5>Order Content</h5>
+                    <hr>
+                    <div class="row justify-content-between  bg-white " style="background-color:#576A85;margin-left: 0;margin-right: 0px;">
+
+                        <div class="card-body table-responsive px-0 ">
+                            <table class="table table-striped " id="TableDetailsOrder" style="width:100% ; background-color: #FFFFFF;">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Total Order Price</th>
+                                        <th>Order Date</th>
+                                        <th>Order Detail</th>
+                                        <th> Status</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody id="CustomerOrderItems">
+
+                                </tbody>
+
+
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!--End Model-->
+
+    <!--block user model-->
+    <div class="modal fade" id="ActionBlockUser" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                        <p class="textstayle"> B<span>lock</span> U<span>ser</p></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                            </button>
+                </div>
+
+                <form id="FormBlockUser">
+                    <div class="modal-body">
+                        <div class="alert alert-danger" role="alert">
+                            Are sure to Block <strong style="color: red;">this user</strong>?
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <input type="submit" class="btn btn-primary mr-auto" value="Yes" style="width: 100px;">
+                        <button type="button" class="btn btn-secondary" style="width: 100px;" data-dismiss="modal">No</button>
+                    </div>
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+    <div class="modal fade" id="ActionunBlockUser" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                        <p class="textstayle">Un<span>Block</span> U<span>ser</p></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                            </button>
+                </div>
+
+                <form id="FormUnBlockUser">
+                    <div class="modal-body">
+                        <div class="alert alert-danger" role="alert">
+                            Are sure to UnBlock <strong style="color: red;">this user</strong>?
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <input type="submit" class="btn btn-success mr-auto" value="Yes" style="width: 100px;">
+                        <button type="button" class="btn btn-secondary" style="width: 100px;" data-dismiss="modal">No</button>
+                    </div>
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+    <div class="modal fade bd-example-modal-lg" id="" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-light">
+                    <h5 class="modal-title pb-2 " id="myLargeModalLabel">
+                        <p class="textstayle">O<span>rder</span> N<span>umber :</span> # <span id="ordre_number"> 1</span> </p>
+                    </h5>
+                    <button type="button" class="close border-danger" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <hr>
+                    <h5>Order Direction</h5>
+                    <hr>
+                    <ul style="list-style: none;">
+                        <li id="customerName">Name: </li>
+                        <li id="customerPhone">phone: </li>
+                        <li id="customerAddress">Address: </li>
+                        <li id="customerPayment">payment type: </li>
+                        <li id="customerDelivary">delivary type: </li>
+                    </ul>
+                    <hr>
+                    <h5>Order Content</h5>
+                    <hr>
+                    <div class="row justify-content-between  bg-white " style="background-color:#576A85;margin-left: 0;margin-right: 0px;">
+
+                        <div class="card-body table-responsive px-0 ">
+                            <table class="table table-striped " id="TableDetailsOrder" style="width:100% ; background-color: #FFFFFF;">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Total Price</th>
+                                        <th>Order Date</th>
+                                        <th>Order Detail</th>
+                                        <th> Total Price</th>
+
+                                    </tr>
+                                </thead>
+
+
+
+                            </table>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--User details order-->
+    <div class="modal fade bd-example-modal-lg" id="ActionCustomerOrderDetails" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-light">
+                    <h5 class="modal-title pb-2 " id="myLargeModalLabel">
+                        <p class="textstayle">O<span>rder</span> N<span>umber :</span> # <span id="Appuserordre_number"> 1</span> </p>
+                    </h5>
+                    <button type="button" class="close border-danger" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <hr>
+                    <h5>Order Direction</h5>
+                    <hr>
+                    <ul style="list-style: none;">
+                        <li id="AppuserOrdercustomerName">Name: </li>
+                        <li id="AppuserOrdercustomerPhone">phone: </li>
+                        <li id="AppuserOrdercustomerAddress">Address: </li>
+                        <li id="AppuserOrdercustomerPayment">payment type: </li>
+                        <li id="AppuserOrdercustomerDelivary">delivary type: </li>
+                    </ul>
+                    <hr>
+                    <h5>Order Content</h5>
+                    <hr>
+                    <div class="row justify-content-between  bg-white " style="background-color:#576A85;margin-left: 0;margin-right: 0px;">
+
+                        <div class="card-body table-responsive px-0 ">
+                            <table class="table table-striped " id="TableAppuserOrderDetails" style="width:100% ; background-color: #FFFFFF;">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Meal Prodect</th>
+                                        <th>Price</th>
+                                        <th>Quantity</th>
+                                        <th> Total Price</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody id="mealOrderdetails"></tbody>
+
+
+
+                            </table>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="js/dataTables.bootstrap4.min.js"></script>
+    <script src="js/hullabaloo.js"></script>
+    <script src="js/jquery.rateit.min.js"></script>
+    <script src="js/fab.js"></script>
+</body>
+
+</html>

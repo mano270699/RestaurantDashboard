@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://kit.fontawesome.com/cf4302401e.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="Css/sheet.css" />
+    <title>Setting</title>
+    <link rel="shortcut icon" href="image/food.png" />
+    <style>
+        input:focus {
+            outline: none;
+        }
+        
+        input:focus {
+            outline: none;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        form {
+            width: 300px;
+            height: 400px;
+            /*background: #333;*/
+            margin: 10px;
+            padding: 15px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .image {
+            width: 100px;
+            height: 100px;
+            /*background: #3664fd;*/
+            background: transparent;
+            border-radius: 50%;
+            margin: 0 auto;
+            overflow: hidden;
+            border: 1px solid #33333359;
+        }
+        
+        .img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        i.fa.fa-camera {
+            position: relative;
+            float: right;
+            left: 140px;
+            bottom: 30px;
+            /*background: #3663fd;*/
+            background: #FA640F linear-gradient(180deg, #FA640F, #FA640F) repeat-x;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            color: #fff;
+        }
+        
+        .input {
+            font-family: 'Poppins', sans-serif;
+            display: block;
+            margin: 10px;
+            width: 300px;
+            padding: 10px;
+            border-radius: 20px;
+            border: none;
+        }
+        
+        .button {
+            margin: 10px auto;
+            width: 30%;
+            padding: 10px;
+            display: block;
+            border: 0;
+            background: #FA640F linear-gradient(180deg, #FA640F, #FA640F) repeat-x;
+            position: relative;
+            left: 10px;
+            top: 15px;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        
+        .label-file {
+            cursor: pointer;
+            color: #FA640F;
+            font-weight: bold;
+        }
+        
+        input#file {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-light">
+        <button class="navbar-toggler ml-auto mb-2 bg-light" type="button" data-toggle="collapse" data-target="#myNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <div class="container-fluid">
+                <div class="row">
+                    <!--sidbar-->
+                    <div class=" col-xl-2  col-lg-3 col-md-4 sidebar ">
+
+                        <ul class="navbar-nav flex-column mt-0 ml-0 ">
+                            <li style="background-color: #FA640F ;height: 50px;margin: 0;width: 400px; " id="li1">
+                                <h2 style="color: #FFFFFF;font-weight: bold;margin-left: 10px;">
+                                    <%=name%>
+                                </h2>
+                            </li>
+                            <li class="nav-item sidebar-link" style="margin-top: 65px">
+                                <a href="/dashboard" class="nav-link text-dark p-3 mb-2 ">
+                                    <i class="fas fa-home fa-lg text-dark mr-3" aria-hidden="true"></i> Dashboard</a>
+                            </li>
+                            <li class="nav-item sidebar-link">
+                                <a href="/category" class="nav-link text-dark p-3 mb-2  ">
+                                    <i class="fas fa-list-alt fa-lg text-dark mr-3 " aria-hidden="true"></i> Category
+                                </a>
+                            </li>
+                            <li class="nav-item sidebar-link">
+                                <a href="/meal_prodect" class="nav-link text-dark p-3 mb-2 ">
+                                    <i class="fas fa-utensils fa-lg text-dark mr-3" aria-hidden="true"></i> Meal Products
+                                </a>
+                            </li>
+                            <li class="nav-item sidebar-link">
+                                <a href="/addoffer" class="nav-link text-dark p-3 mb-2 ">
+                                    <i class="fas fa-gift fa-lg text-dark mr-3" aria-hidden="true"></i> Offer</a>
+                            </li>
+                            <li class="nav-item sidebar-link">
+                                <a href="/appusers" class="nav-link text-dark p-3 mb-2 ">
+                                    <i class="fas fa-users fa-lg text-dark mr-3" aria-hidden="true"></i> App Users</a>
+                            </li>
+
+
+                            <li class="nav-item sidebar-link">
+                                <a href="/slidershow" class="nav-link text-dark p-3 mb-2 ">
+                                    <i class="fas fa-bell fa-lg text-dark mr-3" aria-hidden="true"></i> Slider show </a>
+                            </li>
+                            <li class="nav-item sidebar-link">
+                                <a href="/setting" class="nav-link text-light p-3 mb-2 current ">
+                                    <i class="fas fa-user-cog fa-lg text-light mr-3" style="color: #576A85;" aria-hidden="true"></i>Setting</a>
+                            </li>
+
+
+
+
+                        </ul>
+
+
+                    </div>
+
+                    <div class=" col-xl-10 col-lg-9 col-md-8 " style=" z-index: 1;background-color: white; position: fixed;top:70px ; right: 0px;;height: 60px">
+                        <div class="row">
+                            <div class="col ml-4 pl-3 ml-4">
+                                <p class="textstayle">S<span>etting</span>
+                                </p>
+
+                            </div>
+
+
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+                </div>
+                <br><br><br><br><br><br>
+
+
+
+
+
+                <!--end of sidebar-->
+                <!--top nav-->
+                <div class="col-xl-10 col-lg-9 col-md-8 ml-auto bg-white fixed-top  top-navbar " style="height: 60px;  ">
+                    <div class="row">
+                        <div class="col-md-4 col-lg-8 ">
+
+
+                        </div>
+
+                        <div class="col-md-8 col-lg-4">
+                            <ul class="navbar-nav">
+                                <li class="nav-item icon-parent" style="margin:15px ;">
+                                    <a href="#" class="nav-link icon-bullet">
+                                        <i class="fas fa-comments text-muted fa-lg"></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item icon-parent" style="margin-top:15px ; margin-right: 12px;">
+                                    <a href="#" class="nav-link icon-bullet">
+                                        <i class="fas fa-bell text-muted fa-lg"></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item" style="margin-top:5px ; margin-bottom: 5px;">
+
+
+
+                                    <a href="#">&nbsp;
+                                        <img src="image/Admin/<%=image%>" width="50" height="50" class="rounded-circle">
+                                    </a>
+
+
+                                </li>
+                                <li class="nav-item ml-md-auto" style="margin:15px ;">
+                                    <a href="#" class="nav-link" data-toggle="modal" data-target="#sign-out">
+                                        <i class="fas fa-sign-out-alt text-danger fa-lg"></i>
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+
+                    </div>
+
+
+
+
+                </div>
+
+
+
+
+                <!--end top nav-->
+
+
+            </div>
+        </div>
+
+        </div>
+
+
+
+    </nav>
+    <div class="modal" id="sign-out">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title"> Want to Leave ?</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    Press logout to leave
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">
+                        Stay Here
+                    </button>
+                    <a href="http://192.168.1.12:8081/logout" class="btn btn-danger"> logout</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <!--End of card-->
+    <!-- Table-->
+    <section>
+        <div class="container-fluid">
+            <div class="row mb-15 ">
+                <div class="col-xl-10 col-lg-8 col-md-6 ml-auto">
+
+                    <div class="row  ">
+                        <div class="col-12">
+                            <div class="row" style="margin-top: 400px;">
+                                <form id="FormSettingInfo" enctype="multipart/form-data">
+                                    <div class="image">
+                                        <img class="img" src="image/Admin/<%=image%>">
+                                    </div>
+
+                                    <label for="file" class="label-file"><i class="fa fa-camera" aria-hidden="true"></i></label>
+                                    <input id="file" class="input-file" type="file">
+
+
+
+                                    <input class="input" id="FormSettingInfo_fullname" value="<%=name%>" autofocus placeholder="Yourname Here" type="text" name="fullname">
+                                    <input class="input" placeholder="Your email" value="<%=email%>" id="FormSettingInfo_email" type="email" name="email">
+
+                                    <input class="input" placeholder="Your password" name="password" id="FormSettingInfo_password" value="<%=password%>" type="password">
+
+                                    <button class="button" type="submit" id="FormSettingInfo_btnsubmit" name="btnsubmit">save</button>
+
+
+                                </form>
+                            </div>
+
+
+
+    </section>
+    <!--End of Table-->
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="<%=urlMain %>/js/jquery-3.3.1.min.js"></script>
+    <script src="<%=urlMain %>/js/popper.min.js"></script>
+    <script src="<%=urlMain %>/js/main.js"></script>
+    <script src="<%=urlMain %>/js/bootstrap.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="<%=urlMain %>/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="<%=urlMain %>/js/dataTables.bootstrap4.min.js"></script>
+    <script src="<%=urlMain %>/js/hullabaloo.js"></script>
+    <script src="<%=urlMain %>/js/jquery.rateit.min.js"></script>
+    <script src="<%=urlMain %>/js/fab.js"></script>
+
+</body>
+
+</html>

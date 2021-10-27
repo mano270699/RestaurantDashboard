@@ -1,0 +1,23 @@
+[
+    {
+        "Cat_ID": "1",
+        "Cat_Name": "Tiger Nixon1",
+        "image": "System Architect1"
+        
+    },
+    {
+          "Cat_ID": "2",
+        "Cat_Name": "Tiger Nixon2",
+        "image": "System Architect2"
+    },
+    {
+        "Cat_ID": "3",
+        "Cat_Name": "Tiger Nixon3",
+        "image": "System Architect3"
+    },
+    {
+        "Cat_ID": "4",
+        "Cat_Name": "Tiger Nixon4",
+        "image": "System Architect4"
+    }
+]
